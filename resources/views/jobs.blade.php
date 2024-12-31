@@ -3,7 +3,8 @@
     <h1>Jobs</h1>
     @foreach ($jobs as $job)
         <li>
-            <a href="jobs/"><strong>{{ $job['title'] }}:</strong> Pays: {{ $job['salary'] }} per year.</a>
+            <a href="job/{{ $job['id'] }}"><strong>{{ $job['title'] }}:</strong> Pays: {{ $job['salary'] }} per
+                year.</a>
         </li>
     @endforeach
 </x-layout>
