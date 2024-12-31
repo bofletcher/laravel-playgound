@@ -12,9 +12,15 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', function () {
+Route::get('/jobs', function () {
     //return ['foo' => 'bar'];
-    return view('about');
+    return view('jobs', [
+     'jobs' => [
+        ['title' => 'Director', 'salary' => "10,000"],
+        ['title' => 'Programmer', 'salary' => "100,000"],
+        ['title' => 'Artist', 'salary' => "150,000"]
+     ]
+    ]);
 });
 
 Route::get('/contact', function () {
